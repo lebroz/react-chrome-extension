@@ -1,9 +1,10 @@
 {
-  "name": "chrome-extension-raccoon",
+  "name": "react-chrome-extension",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "webpack && cp manifest.json ./build/chrome/",
+    "dev": "webpack --watch --info-verbosity verbose",
+    "build": "webpack && cp manifest.json ./build",
     "prettier": "prettier --write './src/**/*.js'"
   },
   "eslintConfig": {

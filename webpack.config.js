@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './build/chrome/'),
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
   },
   module: {
@@ -32,5 +32,9 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  watchOptions: {
+    ignored: ['build/**', 'node_modules/**'],
+    poll: 1000,
+  },
   mode: 'production',
 }
